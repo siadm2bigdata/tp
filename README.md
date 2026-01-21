@@ -20,5 +20,5 @@ docker build -t spark-tp .
 
 ## RUN FROM ROOT FOLDER
 
-docker run --rm -it -v $(pwd)/data:/data -v $(pwd)/spark:/app spark-tp spark-submit /app/job_spark.py
+docker run --rm -it -v \$(pwd)/data:/data -v \$(pwd)/spark:/app spark-tp spark-submit /app/job_spark.py
 
