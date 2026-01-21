@@ -1,24 +1,25 @@
 ## FIRST PART : KAFKA
 
-docker compose up -d
+```docker compose up -d```
 
-docker compose ps
+```docker compose ps```
 
+```docker compose exec kafka kafka-topics.sh --create --topic orders --bootstrap-server localhost:9092```
 
-docker compose exec kafka kafka-topics.sh --create --topic orders --bootstrap-server localhost:9092
+```docker exec -it kafka-kafka-1 kafka-topics.sh --list --bootstrap-server localhost:9092```
 
-docker exec -it kafka-kafka-1 kafka-topics.sh --list --bootstrap-server localhost:9092
+```pip install kafka-python```
 
-python consumer.py
+```python consumer.py```
 
-python producer.py
+```python producer.py```
 
 
 ## SECOND PART : SPARK
 
-docker build -t spark-tp .
+```docker build -t spark-tp .```
 
 ## RUN FROM ROOT FOLDER
 
-docker run --rm -it -v \$(pwd)/data:/data -v \$(pwd)/spark:/app spark-tp spark-submit /app/job_spark.py
+```docker run --rm -it -v $(pwd)/data:/data -v \\$(pwd)/spark:/app spark-tp spark-submit /app/job_spark.py```
 
