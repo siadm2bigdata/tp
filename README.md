@@ -6,7 +6,7 @@
 
 ```docker compose exec kafka kafka-topics.sh --create --topic orders --bootstrap-server localhost:9092```
 
-```docker exec -it kafka-kafka-1 kafka-topics.sh --list --bootstrap-server localhost:9092```
+```docker exec -it kafka kafka-topics.sh --list --bootstrap-server localhost:9092```
 
 ```pip install kafka-python```
 
